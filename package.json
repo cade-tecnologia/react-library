@@ -9,13 +9,20 @@
     "start": "start-storybook",
     "clean": "rm -rf ./dist && rm -rf ./dist-storybook",
     "build": "yarn clean && rollup -c",
-    "build-storybook": "yarn clean && build-storybook -s public -c .storybook -o dist-storybook"
+    "build-storybook": "yarn clean && build-storybook -s public -c .storybook -o dist-storybook",
+    "prepare": "yarn run build"
   },
   "files": [
     "./dist"
   ],
-  "keywords": [],
-  "author": "",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "keywords": [
+    "cade",
+    "@cade"
+  ],
+  "author": "Mateus Gomes da Silva Cardoso",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.5",
