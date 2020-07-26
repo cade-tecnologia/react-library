@@ -17,10 +17,10 @@ jobs:
       - run: yarn build-storybook
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-          with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: ./dist-storybook
-            publish_branch: gh-pages
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist-storybook
+          publish_branch: gh-pages
 #      - run: |
 #          git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com" && git config --global user.name "$GITHUB_ACTOR"
 #          yarn install
