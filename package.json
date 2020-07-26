@@ -2,7 +2,7 @@
   "homepage": "https://cade-tecnologia.github.io/react-library",
   "name": "@cade-tecnologia/react-library",
   "version": "1.0.9",
-  "description": "",
+  "description": "Components and utilities to use be used with React",
   "main": "./dist/index.js",
   "module": "./dist/index.es.js",
   "jsnext:main": "build/index.es.js",
@@ -22,7 +22,9 @@
   },
   "keywords": [
     "cade",
-    "@cade"
+    "cade-tecnologia",
+    "Components",
+    "utilities"
   ],
   "husky": {
     "hooks": {
@@ -36,7 +38,18 @@
     "type": "git",
     "url": "https://github.com/cade-tecnologia/react-library"
   },
-  "author": "Mateus Gomes da Silva Cardoso",
+  "author": {
+    "name": "Mateus Gomes da Silva Cardoso",
+    "email": "mateus7532@gmail.com",
+    "url": "https://www.linkedin.com/in/mateus-gomes-da-silva-cardoso"
+  },
+  "maintainers": [
+    {
+      "name": "Mateus Gomes da Silva Cardoso",
+      "email": "mateus7532@gmail.com",
+      "url": "https://www.linkedin.com/in/mateus-gomes-da-silva-cardoso"
+    }
+  ],
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.5",
