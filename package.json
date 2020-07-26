@@ -12,9 +12,7 @@
     "clean": "rm -rf ./dist && rm -rf ./dist-storybook",
     "build": "yarn clean && rollup -c",
     "build-storybook": "yarn clean && build-storybook -s public -c .storybook -o dist-storybook",
-    "prepare": "yarn run build",
-    "predeploy": "yarn build-storybook",
-    "deploy": "gh-pages -d dist-storybook"
+    "prepare": "yarn run build"
   },
   "files": [
     "dist/**/*"
@@ -47,7 +45,7 @@
     "@types/react-dom": "^16.9.8",
     "babel-loader": "^8.1.0",
     "babel-preset-react-app": "^9.1.2",
-    "gh-pages": "^3.1.0",
+    "husky": "^4.2.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "rollup": "^2.23.0",
