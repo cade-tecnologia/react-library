@@ -12,7 +12,7 @@
     "build": "yarn clean && rollup -c",
     "build-storybook": "npm run clean && build-storybook -s public -c .storybook -o dist-storybook",
     "prepare": "yarn run build",
-    "deploy-storybook": "storybook-to-ghpages -- --ci"
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "files": [
     "dist/**/*"

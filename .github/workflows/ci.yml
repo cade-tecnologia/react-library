@@ -19,7 +19,7 @@ jobs:
           yarn install
           yarn build-storybook
       - name: Deploy
-        run: npm run deploy-storybook
+        run: npm run deploy-storybook -- --ci
 #        uses: JamesIves/github-pages-deploy-action@3.5.7
 #        with:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
