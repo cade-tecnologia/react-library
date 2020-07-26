@@ -10,8 +10,9 @@
     "start": "start-storybook",
     "clean": "rm -rf ./dist && rm -rf ./dist-storybook",
     "build": "yarn clean && rollup -c",
-    "build-storybook": "yarn clean && build-storybook -s public -c .storybook -o dist-storybook",
-    "prepare": "yarn run build"
+    "build-storybook": "npm clean && build-storybook -s public -c .storybook -o dist-storybook",
+    "prepare": "yarn run build",
+    "deploy-storybook": "storybook-to-ghpages -- --ci --host-token-env-variable=GITHUB_TOKEN"
   },
   "files": [
     "dist/**/*"
@@ -28,11 +29,19 @@
       "post-commit": "yarn run clean"
     }
   },
+  "engines": {
+    "node": "12.18.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cade-tecnologia/react-library"
+  },
   "author": "Mateus Gomes da Silva Cardoso",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@storybook/react": "^5.3.19",
+    "@storybook/storybook-deployer": "^2.8.6",
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
     "babel-loader": "^8.1.0",
