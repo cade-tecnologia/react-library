@@ -21,6 +21,9 @@ jobs:
       - name: Deploy
         run: |
           git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com" && git config --global user.name "$GITHUB_ACTOR"
+          git config --global user.emal
+          git config --global user.name
+          echo $GITHUB_TOKEN
           npm run deploy-storybook
 #        uses: JamesIves/github-pages-deploy-action@3.5.7
 #        with:
