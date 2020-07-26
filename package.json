@@ -23,6 +23,11 @@
     "cade",
     "@cade"
   ],
+  "husky": {
+    "hooks": {
+      "post-commit": "yarn run clean"
+    }
+  },
   "author": "Mateus Gomes da Silva Cardoso",
   "license": "ISC",
   "devDependencies": {
