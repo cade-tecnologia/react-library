@@ -8,15 +8,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 12.18.1
-      - name: Install and Build
-        run: |
-          git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com" && git config --global user.name "$GITHUB_ACTOR"
-          yarn install
-          yarn deploy
+      - name: Build
+      - run: yarn install
+      - run: yarn build-storybook
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./dist-storybook
+            publish_branch: gh-pages
+#      - run: |
+#          git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com" && git config --global user.name "$GITHUB_ACTOR"
+#          yarn install
+#          yarn deploy
   publish-pkg:
     needs: deploy-storybook
     runs-on: ubuntu-latest
