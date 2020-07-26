@@ -1,10 +1,28 @@
-name: Publish Package
+name: Continuous Integration
 on:
   push:
     branches:
       - master
 jobs:
-  publish:
+  deploy-storybook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.1
+        with:
+          persist-credentials: false
+      - name: Install and Build
+        run: |
+          yarn install
+          yarn build-storybook
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.5.7
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: dist-storybook
+  publish-pkg:
+    needs: deploy-storybook
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
