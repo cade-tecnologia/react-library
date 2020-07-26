@@ -5,6 +5,7 @@
   "main": "./dist/index.js",
   "module": "./dist/index.es.js",
   "jsnext:main": "build/index.es.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "start": "start-storybook",
     "clean": "rm -rf ./dist && rm -rf ./dist-storybook",
