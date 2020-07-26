@@ -6,8 +6,10 @@
   "module": "./dist/index.es.js",
   "jsnext:main": "build/index.es.js",
   "scripts": {
-    "clean": "rm -rf ./dist",
-    "build": "yarn clean && rollup -c"
+    "start": "start-storybook",
+    "clean": "rm -rf ./dist && rm -rf ./dist-storybook",
+    "build": "yarn clean && rollup -c",
+    "build-storybook": "yarn clean && build-storybook -s public -c .storybook -o dist-storybook"
   },
   "files": [
     "./dist"
@@ -16,8 +18,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@storybook/react": "^5.3.19",
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
+    "babel-loader": "^8.1.0",
+    "babel-preset-react-app": "^9.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "rollup": "^2.23.0",
