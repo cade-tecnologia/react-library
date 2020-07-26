@@ -1,7 +1,7 @@
 {
   "homepage": "https://cade-tecnologia.github.io/react-library",
   "name": "@cade-tecnologia/react-library",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Components and utilities to use be used with React",
   "main": "./dist/index.js",
   "module": "./dist/index.es.js",
