@@ -21,6 +21,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
           FOLDER: dist-storybook
+          BUILD_SCRIPT: yarn install && yarn run build-storybook
   publish-pkg:
     needs: deploy-storybook
     runs-on: ubuntu-latest
