@@ -1,4 +1,5 @@
 {
+  "homepage": "https://cade-tecnologia.github.io/react-library",
   "name": "@cade-tecnologia/react-library",
   "version": "1.0.7",
   "description": "",
@@ -10,9 +11,10 @@
     "start": "start-storybook",
     "clean": "rm -rf ./dist && rm -rf ./dist-storybook",
     "build": "yarn clean && rollup -c",
-    "build-storybook": "npm run clean && build-storybook -s public -c .storybook -o dist-storybook",
+    "build-storybook": "yarn clean && build-storybook -s public -c .storybook -o dist-storybook",
     "prepare": "yarn run build",
-    "deploy-storybook": "storybook-to-ghpages"
+    "predeploy": "yarn build-storybook",
+    "deploy": "gh-pages -d dist-storybook"
   },
   "files": [
     "dist/**/*"
@@ -36,21 +38,16 @@
     "type": "git",
     "url": "https://github.com/cade-tecnologia/react-library"
   },
-  "storybook-deployer": {
-    "gitUsername": "UnDer-7",
-    "gitEmail": "mateus7532@gmail.com",
-    "commitMessage": "Deploy Storybook"
-  },
   "author": "Mateus Gomes da Silva Cardoso",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@storybook/react": "^5.3.19",
-    "@storybook/storybook-deployer": "^2.8.6",
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
     "babel-loader": "^8.1.0",
     "babel-preset-react-app": "^9.1.2",
+    "gh-pages": "^3.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "rollup": "^2.23.0",
