@@ -36,6 +36,11 @@
     "type": "git",
     "url": "https://github.com/cade-tecnologia/react-library"
   },
+  "storybook-deployer": {
+    "gitUsername": "UnDer-7",
+    "gitEmail": "mateus7532@gmail.com",
+    "commitMessage": "Deploy Storybook"
+  },
   "author": "Mateus Gomes da Silva Cardoso",
   "license": "ISC",
   "devDependencies": {
