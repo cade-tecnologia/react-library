@@ -1,16 +1,17 @@
 import React, { ReactElement, ReactNode } from 'react';
 
-export interface ButtonProps {
-  children: ReactNode,
-  color?: 'red' | 'green',
+export interface ButtonProp {
+  color: 'green' | 'red';
+  children: ReactNode | ReactNode[];
 }
 
-export default function Button({ color, children }: ButtonProps): ReactElement {
+export default function Button({ color }: ButtonProp): ReactElement {
   return (
-    <button style={{color}}
-            onClick={() => console.log('CLICKED')}
-    >
-      {children}
-    </button>
-  )
+    <button
+      type="button"
+      style={{ color }}
+      // eslint-disable-next-line no-console
+      onClick={() => console.log('CLICKED')}
+    />
+  );
 }
