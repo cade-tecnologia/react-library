@@ -1123,10 +1123,10 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@cade-tecnologia/eslint-config@^1.0.3":
-  version "1.0.3"
-  resolved "https://npm.pkg.github.com/download/@cade-tecnologia/eslint-config/1.0.3/d0846d023cb177bd12f0606e7fbb6755736c18d89fc5317817efb5f4b4ce1b7a#c187aa6553f5670acb5e4a1ba2129a3ca666d5dc"
-  integrity sha512-EFJwwh4gX2rCJdLfgUiYu3w38K/hyVh+2XrVP/ymaKqd2oR7a2T0LV8Pt9zevij674OQ98fFohsIeMCBnU/C+g==
+"@cade-tecnologia/eslint-config@^1.0.13":
+  version "1.0.13"
+  resolved "https://npm.pkg.github.com/download/@cade-tecnologia/eslint-config/1.0.13/0e6729bc07ac1c2d9240d921591e995a45f780651a581f2a8cab3942f161bc32#29d0df576adcb8251efce264933f429722808466"
+  integrity sha512-obDzmBfMv7s892UQCXnjsACTn0oW3Q1oC+qTtno1dC9cmNASrNxR2b/k4Fn8BBhT3t/AeAXsmMF5F+fzLMSWJA==
 
 "@emotion/cache@^10.0.27":
   version "10.0.29"
