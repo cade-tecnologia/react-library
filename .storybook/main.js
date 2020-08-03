@@ -1,6 +1,22 @@
+const path = require('path');
+
 module.exports = {
   stories: ['../src/stories/**/*.story.tsx'],
-  addons: ['@storybook/addon-knobs/register'],
+  addons: [
+    '@storybook/addon-knobs/register',
+    {
+      name: '@storybook/addon-storysource',
+      options: {
+        rule: {
+          test: [/\.story\.tsx?$/],
+          include: [path.resolve(__dirname, '..', 'src', 'stories')], // You can specify directories
+        },
+        loaderOptions: {
+          prettierConfig: { printWidth: 80, singleQuote: false },
+        },
+      },
+    },
+  ],
   webpackFinal: (config) => {
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
