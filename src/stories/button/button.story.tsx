@@ -1,17 +1,25 @@
 import React, { ReactElement } from 'react';
+import { withKnobs, text } from "@storybook/addon-knobs";
 
 import { Button } from '../../components';
 
 export default {
   component: Button,
   title: 'Button',
+  decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
 
 export function Green(): ReactElement {
-  return <Button color="green">Verde</Button>;
+  const color = text('color', 'green');
+  const conteudo = text('conteudo', 'Verde');
+
+  return <Button color={color}>{conteudo}</Button>;
 }
 
 export function Red(): ReactElement {
-  return <Button color="red">Vermelho</Button>;
+  const color = text('color', 'red');
+  const conteudo = text('conteudo', 'Vermelho');
+
+  return <Button color={color}>{conteudo}</Button>;
 }
