@@ -31,9 +31,6 @@
       "post-commit": "yarn clean"
     }
   },
-  "engines": {
-    "node": ">=0.12"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/cade-tecnologia/react-library"
